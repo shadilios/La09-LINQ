@@ -79,7 +79,18 @@ namespace LINQ
 
         public void MergeAllQueries(FeatureCollection someCollection)
         {
-            //I dont understand this Task
+            Console.WriteLine("one single query.");
+            int count = 0;
+
+            var allNeighborhoods = (from n in featureCollection.features
+                                    where n.properties.neighborhood != ""
+                                    select n.properties.neighborhood).Distinct();
+
+            foreach (var item in allNeighborhoods)
+            {
+                count++;
+                Console.WriteLine(count + ". " + item);
+            }
 
             Console.WriteLine("// ------------------------------------------------ //");
             Console.WriteLine("// ------------------------------------------------ //");

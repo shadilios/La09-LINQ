@@ -22,7 +22,7 @@ namespace LINQ
             functions.PrintAllNeighborhoods(collection);
             functions.FilterNeighborhoodsWithNoName(collection);
             functions.RemoveDuplicates(collection);
-
+            functions.MergeAllQueries(collection);
             functions.RemoveDuplicatesUsingFunctions(collection);
         }
     }
